@@ -29,13 +29,14 @@ const CardDetails = ({item}) => {
         </Stack>
         <Stack space={2} gap="60px"  sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
         <Typography variant="h6"> Mechanic's note: 
-        <TextField id="mechNote"  defaultValue={notes} rows={6} multiline variant="filled"   sx={{width: '80%', mx: 'auto', ml: 4 }} />
+        <TextField id="mechNote"  defaultValue={notes} rows={6} multiline variant="filled"   sx={{width: '80%', mx: 'auto' }} />
         </Typography>
-        <Button variant="contained" onClick={handleNoteSubmit} sx={{width: '5rem', mx: 'auto', my: 1, }}>
-          Submit
-        </Button>
         </Stack>
-        
+        <Box ml={0}>
+          <Button variant="contained" onClick={handleNoteSubmit} sx={{ marginLeft: 14 }}>
+            Submit
+          </Button>
+        </Box>
         <Stack>
           {note}
         </Stack>
